@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Upload Question Bank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input[type="text"], input[type="file"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 16px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #218838;
+        }
+        p {
+            text-align: center;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Upload Question Bank</h2>
+
+<form method="post" enctype="multipart/form-data" action="/upload">
+    <!-- File Upload -->
+    <label for="file">Select Question Bank (PDF/Word):</label>
+    <input type="file" name="file" id="file" required>
+
+    <!-- Metadata -->
+    <label for="sem">Semester:</label>
+    <input type="text" name="sem" id="sem" placeholder="e.g., 5th Semester" required>
+
+    <label for="monthYear">Month & Year:</label>
+    <input type="text" name="monthYear" id="monthYear" placeholder="e.g., Dec 2023/Jan 2024" required>
+
+    <label for="subject">Subject:</label>
+    <input type="text" name="subject" id="subject" placeholder="e.g., Automata Theory and Compiler Design" required>
+
+    <label for="subjectCode">Subject Code:</label>
+    <input type="text" name="subjectCode" id="subjectCode" placeholder="e.g., 21CS51" required>
+
+    <!-- Submit -->
+    <button type="submit">Upload & Generate</button>
+</form>
+
+<p th:text="${message}"></p>
+
+</body>
+</html>

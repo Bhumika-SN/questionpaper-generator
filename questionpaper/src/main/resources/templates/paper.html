@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Generated Question Paper</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        h1, h2, h3 { text-align: center; margin: 10px 0; }
+        .note { margin: 20px 0; text-align: center; font-size: 14px; }
+        .questions { margin-top: 30px; }
+        .module { text-align: center; font-weight: bold; margin: 30px 0 10px 0; }
+        .part { font-weight: bold; margin-top: 15px; }
+        .question { margin-left: 40px; }
+        .download { text-align: center; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+<h1>CBCS SCHEME</h1>
+
+<!-- Exam Details -->
+<h2 th:text="${sem} + ' B.E. Degree Examination, ' + ${monthYear}"></h2>
+<h2 th:text="${subject}"></h2>
+<h3>Time: 3 hrs &nbsp;&nbsp;&nbsp; Max. Marks: 100</h3>
+
+<div class="note">
+    Note: Answer any FIVE full questions, choosing ONE full question from each module.
+</div>
+
+<!-- Questions -->
+<div class="questions" th:if="${paper != null}">
+    <div th:each="moduleEntry : ${paper}">
+        <div class="module" th:text="${moduleEntry.key}"></div>
+
+        <div th:each="partEntry : ${moduleEntry.value}">
+            <div class="part" th:text="${partEntry.key}"></div>
+            <div th:each="q, iterStat : ${partEntry.value}">
+                <div class="question" th:text="${iterStat.index + 1} + '. ' + ${q}"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Download Button -->
+<div class="download">
+    <form th:action="@{/paper/pdf}" method="get">
+        <input type="hidden" name="sem" th:value="${sem}">
+        <input type="hidden" name="monthYear" th:value="${monthYear}">
+        <input type="hidden" name="subject" th:value="${subject}">
+        <input type="hidden" name="subjectCode" th:value="${subjectCode}">
+        <button type="submit">Download PDF</button>
+    </form>
+</div>
+
+</body>
+</html>

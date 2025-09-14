@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Generated VTU Paper</title>
+</head>
+<body>
+<h2 style="text-align:center;">VTU Question Paper</h2>
+<hr/>
+
+<div th:each="module, parts : ${paper}">
+    <h3 th:text="${module}"></h3>
+
+    <div>
+        <h4>Part A</h4>
+        <ol>
+            <li th:each="q : ${parts['Part A']}" th:text="${q}"></li>
+        </ol>
+
+        <p style="text-align:center;">OR</p>
+
+        <h4>Part B</h4>
+        <ol>
+            <li th:each="q : ${parts['Part B']}" th:text="${q}"></li>
+        </ol>
+    </div>
+    <hr/>
+</div>
+</body>
+</html>

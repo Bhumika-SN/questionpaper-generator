@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Extracted Questions</title>
+</head>
+<body>
+<h2>All Extracted Questions</h2>
+<ul>
+    <li th:each="q : ${allQuestions}" th:text="${q}"></li>
+</ul>
+
+<h2>Randomly Selected Questions</h2>
+<ul>
+    <li th:each="rq : ${randomQuestions}" th:text="${rq}"></li>
+</ul>
+</body>
+</html>
