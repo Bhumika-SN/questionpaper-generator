@@ -10,6 +10,7 @@
         <version>3.2.5</version> <!-- stable Spring Boot -->
         <relativePath/>
     </parent>
+artifactId
 
     <groupId>com.vtuu</groupId>
     <artifactId>questionpaper</artifactId>
