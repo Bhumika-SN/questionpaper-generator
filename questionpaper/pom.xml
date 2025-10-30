@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+    <parent><?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             <version>2.0.30</version>
@@ -13,7 +13,7 @@
 
     <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
+        <artifactId>spring-boot-starter-parent</artifactId>    <parent>
         <version>3.2.5</version> <!-- stable Spring Boot -->
         <relativePath/>
     </parent>
