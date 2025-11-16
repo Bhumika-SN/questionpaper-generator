@@ -70,7 +70,7 @@ artifactId
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     <dependencies>
         <!-- Spring Web -->
         <dependency>
