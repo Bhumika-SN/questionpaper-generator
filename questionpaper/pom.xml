@@ -130,6 +130,7 @@ artifactId
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
             <!-- Compiler with Java 17 -->
             <plugin>
