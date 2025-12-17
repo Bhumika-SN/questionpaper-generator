@@ -15,7 +15,6 @@
         <!-- Word support -->
 
   <parent><?xml version="1.0" 
-
 ...
 ncoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
