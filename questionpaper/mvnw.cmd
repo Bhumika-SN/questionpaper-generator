@@ -9,7 +9,9 @@ huu<# : batch portion
 @REM with the License.  You may obtain a copy of the License at
 @REM
 
-http://www.apaxhe
+http://www.apache
+
+
 
 @REM    http://www.apache.org/licenses/LICENSE-2.0
 @REM
