@@ -11,12 +11,6 @@ huu<# : batch portion
 
 http://www.apache
 
-
-
-
- 
-
-
 l
 @REM    http://www.apache.org/licenses/LICENSE-2.0
 @REM
