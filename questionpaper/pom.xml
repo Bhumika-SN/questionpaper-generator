@@ -12,8 +12,6 @@
 /dependency>
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 
-
-
         <!-- Word support -->
 
   <parent><?xml version="1.0" 
